@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Rubik+Mono+One&family=Rubik:ital,wght@0,400;0,700;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#menu-toggle:checked + #menu {
+    display: block;
+}
+
+body {
+    @apply bg-gradient-to-b from-blue to-blue-dark min-h-screen
+}
+
+.hyper {
+    @apply font-rubik font-black italic
+}
+
+#hero {
+    @apply ml-10 md:ml-12
+}
+
+section {
+    @apply mx-auto w-10/12 py-24
+}
+
+p {
+    @apply text-black opacity-70 font-inter
+}
