@@ -14,7 +14,7 @@ const links = [
 export default function Nav() {
   const user = useUser();
   return (
-    <nav className="sticky top-0 lg:px-8 px-6 bg-white bg-opacity-50 flex flex-wrap items-center lg:py-0 py-2">
+    <nav className="sticky top-0 lg:px-8 px-6 bg-white bg-opacity-50 backgroundblur z-50 flex flex-wrap items-center lg:py-0 py-2">
       <div className="flex-1 flex justify-between items-center font-cormorant text-xl">
         <Link href="/">
           <a className="font-rubik-mono text-xl">Alamo City Hacks</a>

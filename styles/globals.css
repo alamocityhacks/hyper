@@ -8,20 +8,16 @@
     display: block;
 }
 
-body {
-    @apply bg-gradient-to-b from-blue to-blue-dark min-h-screen
-}
-
 .hyper {
     @apply font-rubik font-black italic
 }
 
 #hero {
-    @apply ml-10 md:ml-12
+    @apply pl-10 md:pl-12
 }
 
 section {
-    @apply mx-auto w-10/12 py-24
+    @apply mx-auto w-10/12 py-20
 }
 
 p {
@@ -34,4 +30,12 @@ section > h1 {
 
 section > h1 + p {
     @apply mt-2 text-xl md:text-2xl w-11/12
+}
+
+section > h1 + h2 {
+    @apply text-xl md:text-2xl w-11/12
+}
+
+.backgroundblur {
+    backdrop-filter: blur(4px);
 }
