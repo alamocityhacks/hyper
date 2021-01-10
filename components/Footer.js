@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const links = [
     { name: 'Press Kit', href: '/press', },
-    { name: 'Sponsor Deck', href: '/SponsorshipDeck.pdf', },
+    { name: 'Sponsor Deck', href: '/documents/SponsorshipDeck.pdf', },
     { name: 'Donate', href: 'https://bank.hackclub.com/donations/start/alamocityhacks', },
     { name: 'Contact', href: 'mailto:team@alamocityhacks.com', },
 ]
@@ -13,7 +13,7 @@ export default function Footer() {
             <div id="footernav" className="mb-10 flex flex-col md:flex-row space-y-6 md:space-x-12 md:space-y-0 md:w-screen text-xl justify-center items-center">
                 {links.map(({name, href}) => (
                     <Link href={href ?? ``}>
-                        <a className="">{name ?? ``}</a>
+                        <a target="_blank" className="hover:bg-black hover:bg-opacity-5 px-4 py-2 rounded-xl">{name ?? ``}</a>
                     </Link>
                 ))}
             </div>
