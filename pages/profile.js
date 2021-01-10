@@ -1,4 +1,3 @@
-import Layout from '../components/layout';
 import { useUser } from '../lib/hooks';
 import { MonochromeIcons, Icon } from '@magiclabs/ui';
 
@@ -6,7 +5,7 @@ const Profile = () => {
   const user = useUser({ redirectTo: '/login' });
 
   return (
-    <Layout>
+    <div>
       {user && (
         <>
           <div>
@@ -61,7 +60,7 @@ const Profile = () => {
           font-size: 17px;
         }
       `}</style>
-    </Layout>
+    </div>
   );
 };
 

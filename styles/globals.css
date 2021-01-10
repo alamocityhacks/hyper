@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Rubik+Mono+One&family=Rubik:ital,wght@0,400;0,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Rubik+Mono+One&family=Rubik:ital,wght@0,400;0,700;0,900;1,900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -26,4 +26,12 @@ section {
 
 p {
     @apply text-black opacity-70 font-inter
+}
+
+section > h1 {
+    @apply font-rubik text-5xl uppercase font-bold
+}
+
+section > h1 + p {
+    @apply mt-2 text-xl md:text-2xl w-11/12
 }

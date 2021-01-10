@@ -19,7 +19,7 @@ module.exports = {
       fontFamily: {
         'rubik-mono': 'Rubik Mono One, sans-serif',
         'rubik': 'Rubik, sans-serif',
-        'inter': 'Inter, ui-sans-serif, system-ui, sans-serif',
+        'inter': 'Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif',
       }
     },
   },
