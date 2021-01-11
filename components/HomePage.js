@@ -38,7 +38,7 @@ export default function HomePage() {
                         <div className="font-inter text-2xl pt-4 sm:pt-6">
                             <div className="font-bold mb-2">Noon to noon</div>
                             <div className="mb-4">Trinity University, SATX</div>
-                            <a className="mt-8 px-4 py-2 text-xl rounded-xl border border-white hover:bg-white hover:text-black">
+                            <a className=" pointer-events-none mt-8 px-4 py-2 text-xl rounded-xl border border-white hoverr:bg-white hover:text-black">
                                     Sign ups open February 1st
                             </a>
                         </div>
