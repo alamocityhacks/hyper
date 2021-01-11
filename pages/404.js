@@ -8,9 +8,21 @@ export default function ErrorPage() {
         <div>
             <Head />
             <Nav />
+            {/*<motion.img
+                src="/planet1.svg"
+                className="md:absolute w-72 flex justify-center"
+                animate={{
+                    y: [-10, 10],
+                }}
+                transition={{
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                    duration: 4,
+                }}
+            />*/}
             <motion.img
                 src="/rocket.png"
-                className="absolute top-1/4 w-24"
+                className="absolute z-20 top-1/4 w-24"
                 animate={{
                     scale: 0.5,
                     x: ['0vw', '100vw'],
@@ -23,7 +35,7 @@ export default function ErrorPage() {
                 }}
             />
             <div
-                className="my-32 h-10 font-rubik uppercase italic font-black text-center align-middle text-6xl md:leading-loose">
+                className="relative z-10 h-10 mt-12 font-rubik uppercase italic font-black text-center align-middle text-6xl md:leading-loose">
                 404. Not found.
             </div>
             <Footer />
