@@ -52,7 +52,7 @@ export default function HomePage() {
                         Hyper is a 24-hour event where 350 high schoolers will come from San Antonio and Austin to compete in South Texas’ first coding competition. We’ll provide workshops, mentorship, free meals and drinks, and places to sleep. You’ll compete in a team of 4 and solve quests. Get points, beat others. The next morning, we’ll find out who wins.
                     </p>
                     <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-10">
-                        <Card icon="lightbulb" color="red" heading="Made for beginners">
+                        <Card icon="lightbulb" color="red" heading="Made for all coding levels">
                             Whether you're a complete beginner or an advanced Javascript expert, we'll hold multiple intro workshops and have mentors to help you through the night!
                         </Card>
                         <Card icon="sparkles" color="orange" heading="Lots of fun">
