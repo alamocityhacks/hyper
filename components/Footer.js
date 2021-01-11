@@ -19,7 +19,7 @@ export default function Footer() {
                     </li>
                 ))}
             </ul>
-            <h1 className="opacity-60 px-4 md:px-0 text-2xl md:text-3xl mb-4">copyright alamo city hacks {new Date().getFullYear()} all rights reserved</h1>
+            <h1 className="opacity-60 px-6 md:px-4 text-2xl md:text-3xl">copyright alamo city hacks {new Date().getFullYear()} all rights reserved</h1>
         </div>
     )
 }

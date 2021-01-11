@@ -14,7 +14,7 @@ export default function HomePage() {
         <div>
             <Head />
             <Nav />
-            <div id="hero" className="bg-gradient-to-b from-blue to-blue-dark min-h-screen pt-12 text-white font-rubik">
+            <div id="hero" className="bg-gradient-to-b from-blue to-blue-dark h-full sm:min-h-screen xl:min-h-0 xl:h-full xl:pb-12 pt-6 pb-8 md:py-12 text-white font-rubik">
                 {/*<div className="absolute z-0 w-screen h-screen left-3/4 flex flex-col space-y-16 md:space-y-10">
                     <motion.svg
                         className="w-16 h-16" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +77,7 @@ export default function HomePage() {
                     </motion.svg>
                 </div>*/}
                 <div className="z-10 relative">
-                    <div className="uppercase opacity-60 text-4xl">Presents</div>
+                    <div className="uppercase opacity-60 text-2xl md:text-4xl">Presents</div>
                     <h1 className="uppercase hyper text-6xl md:text-8xl">Hyper</h1>
                     <h2 className="uppercase text-4xl md:text-5xl w-3/5">A coding competition for high schoolers</h2>
                     <div className="mt-4 flex flex-col sm:flex-row sm:space-x-10">
@@ -123,14 +123,14 @@ export default function HomePage() {
                             30 quests.
                             <br />
                             <div className="leading-normal">
-                                Not king-of-the-hill style. Every quest gets you 1 point. Team with the highest points the next day wins.
+                                Not king-of-the-hill (KOTH) style. Every quest gets you 1 point. Team with the highest points the next day wins.
                             </div>
                         </Card>
                         <Card icon="puzzle" color="orange" heading="Intermediates" extraclasses="leading-loose">
                             20 quests.
                             <br />
                             <div className="leading-normal">
-                                King-of-the-hill style. Every quest gets you to the next, the leading team gets 1 point every half-hour.
+                                KOTH style. Every quest gets you to the next, the leading team gets 1 point every half-hour.
                             </div>
                         </Card>
                         <Card icon="flag" color="turquoise" heading="Advanced" extraclasses="leading-loose">
@@ -178,7 +178,7 @@ export default function HomePage() {
                             That’s a good question! First, I would join the <a href="https://hackclub.com/slack"><span className="text-red font-bold">Hack Club</span></a> Slack. It’s a place for high schoolers where they can get support on coding, design and other cool stuff.<br />We have some <a href="/#docs" className="text-red font-bold underline">practice problems</a> too!
                         </Question>
                         <Question title="Sleeping?">
-                            Ya we were a bit vague. Typically a hackathons like SoHacks, you’d be sleeping on the couches, beanbags, or  benches. If you bring a sleeping bag, you can also sleep on the floor. The second floor of the building will be dark after 2am.
+                            Ya we were a bit vague. Typically at hackathons like SoHacks, you’d be sleeping on the couches, beanbags, or  benches. If you bring a sleeping bag, you can also sleep on the floor. The second floor of the building will be dark after 2am.
                         </Question>
                         <Question title="Do I drop my student off?">
                             Yep! Come at or before registration time, and drop your kid off. We’ll give you our number day-of in case you need to contact us immediately. You’ll be able to stay until quests start. That’s 1pm.
