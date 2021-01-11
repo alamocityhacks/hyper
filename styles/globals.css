@@ -4,6 +4,14 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --blue: '#69709F';
+    --red: '#E94957';
+    --orange: '#FF7E47';
+    --yellow: '#FFFD85';
+    --turquoise: '#2CDAC5';
+}
+
 #menu-toggle:checked + #menu {
     display: block;
 }
@@ -18,6 +26,15 @@
 
 section {
     @apply mx-auto w-10/12 pt-20
+}
+
+.left-svg {
+    left: 65%;
+}
+
+.leftxl-svg {
+    left: 80%;
+    transform: scale(2);
 }
 
 p {

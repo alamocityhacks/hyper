@@ -15,67 +15,20 @@ export default function HomePage() {
             <Head />
             <Nav />
             <div id="hero" className="bg-gradient-to-b from-blue to-blue-dark h-full sm:min-h-screen xl:min-h-0 xl:h-full xl:pb-12 pt-6 pb-8 md:py-12 text-white font-rubik">
-                {/*<div className="absolute z-0 w-screen h-screen left-3/4 flex flex-col space-y-16 md:space-y-10">
-                    <motion.svg
-                        className="w-16 h-16" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"
+                {<div className="hidden md:block absolute z-0 left-svg xl:leftxl-svg">
+                    <motion.img
+                        src="/spaceship2.svg"
+                        className="w-64 hidden md:block"
                         animate={{
-                            x: [-40, 40],
-                            y: [0, 15],
+                            y: [-15, 15],
                         }}
                         transition={{
                             duration: 3,
                             repeat: Infinity,
                             repeatType: "reverse",
                         }}
-                    >
-                        <circle cx="100" cy="100" r="100" fill="#C4C4C4" />
-                    </motion.svg>
-                    <motion.svg
-                        className="w-16 h-16" viewBox="0 0 170 170" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        animate={{
-                            x: [-20, 40],
-                            y: [0, 15],
-                        }}
-                        transition={{
-                            duration: 3,
-                            delay: 1,
-                            repeat: Infinity,
-                            repeatType: "reverse",
-                        }}
-                    >
-                        <rect width="170" height="170" rx="15" fill="#C4C4C4"/>
-                    </motion.svg>
-                    <motion.svg
-                        className="w-16 h-16" viewBox="0 0 178 170" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        animate={{
-                            x: [-40, 40],
-                            y: [0, 15],
-                        }}
-                        transition={{
-                            duration: 3,
-                            delay: 2,
-                            repeat: Infinity,
-                            repeatType: "reverse",
-                        }}
-                    >
-                        <path d="M81.3915 6.41641C83.7864 -0.954075 94.2136 -0.954073 96.6085 6.41641L111.9 53.4803C112.971 56.7765 116.043 59.0081 119.509 59.0081H168.995C176.745 59.0081 179.967 68.9251 173.697 73.4803L133.662 102.567C130.858 104.604 129.685 108.215 130.756 111.512L146.048 158.575C148.443 165.946 140.007 172.075 133.737 167.52L93.7023 138.433C90.8984 136.396 87.1016 136.396 84.2977 138.433L44.2628 167.52C37.9931 172.075 29.5573 165.946 31.9521 158.575L47.244 111.512C48.315 108.215 47.1418 104.604 44.3379 102.567L4.30297 73.4803C-1.96674 68.9251 1.25546 59.0081 9.00525 59.0081H58.4911C61.9569 59.0081 65.0286 56.7765 66.0996 53.4803L81.3915 6.41641Z" fill="#C4C4C4"/>
-                    </motion.svg>
-                    <motion.svg
-                        className="w-16 h-16" viewBox="0 0 160 140" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        animate={{
-                            x: [-40, 40],
-                            y: [0, 15],
-                        }}
-                        transition={{
-                            duration: 3,
-                            delay: 3,
-                            repeat: Infinity,
-                            repeatType: "reverse",
-                        }}
-                    >
-                        <path d="M71.3397 5C75.1887 -1.66666 84.8112 -1.66667 88.6603 5L157.942 125C161.791 131.667 156.98 140 149.282 140H10.718C3.01997 140 -1.79129 131.667 2.05771 125L71.3397 5Z" fill="#C4C4C4"/>
-                    </motion.svg>
-                </div>*/}
+                    />
+                </div>}
                 <div className="z-10 relative">
                     <div className="uppercase opacity-60 text-2xl md:text-4xl">Presents</div>
                     <h1 className="uppercase hyper text-6xl md:text-8xl">Hyper</h1>

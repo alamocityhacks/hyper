@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 export default function Card({
     type,
     icon,
@@ -7,6 +9,20 @@ export default function Card({
     extraclasses,
 }) {
     const description = children
+    const idval = heading?.replace(/\s/g, '')?.replace(/'/g, '')?.toLowerCase() + icon ?? ``;
+    useEffect(() => {
+        const colors = {
+            red: '#E94957',
+            orange: '#FF7E47',
+            yellow: '#FFFD85',
+            green: '#10B981',
+            blue: '#69709F',
+            turquoise: '#2CDAC5',
+        }
+        const heading = document.querySelector(`#cardfour${idval ?? ``}`)
+        if (heading != null) heading.style.color = colors[color];
+        document.querySelectorAll(`.cardfour`).forEach(card => card.style.paddingBottom = '0.5rem');
+    });
     switch (type) {
         case 2:
             return (
@@ -30,7 +46,7 @@ export default function Card({
             return (
                 <div className="font-inter bg-black bg-opacity-5 p-8 rounded-xl">
                     {renderIcon(icon, color, 4)}
-                    <h3 className={`m${icon ? `y` : `b`}-2 font-black text-3xl lg:text-5xl text-${color ?? 'black'}`}>{heading}</h3>
+                    <h3 id={`cardfour${idval ?? ``}`} className={`cardfour m${icon ? `y` : `b`}-2 font-black text-3xl lg:text-5xl text-${color ?? 'black'}`}>{heading}</h3>
                     <div className={`text-xl w-11/12 ${extraclasses ?? ``}`}>{description}</div>
                 </div>
             )
