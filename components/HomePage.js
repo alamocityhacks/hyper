@@ -15,7 +15,7 @@ export default function HomePage() {
             <Head />
             <Nav />
             <div id="hero" className="bg-gradient-to-b from-blue to-blue-dark h-full sm:min-h-screen xl:min-h-0 xl:h-full xl:pb-12 pt-6 pb-8 md:py-12 text-white font-rubik">
-                {<div className="hidden md:block absolute z-0 left-svg xl:leftxl-svg">
+                <div className="hidden md:block absolute z-0 left-svg xl:leftxl-svg">
                     <motion.img
                         src="/spaceship2.svg"
                         className="w-64 hidden md:block"
@@ -28,7 +28,7 @@ export default function HomePage() {
                             repeatType: "reverse",
                         }}
                     />
-                </div>}
+                </div>
                 <div className="z-10 relative">
                     <div className="uppercase opacity-60 text-2xl md:text-4xl">Presents</div>
                     <h1 className="uppercase hyper text-6xl md:text-8xl">Hyper</h1>
