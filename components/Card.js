@@ -30,7 +30,7 @@ export default function Card({
             return (
                 <div className="font-inter bg-black bg-opacity-5 p-8 rounded-xl">
                     {renderIcon(icon, color, 4)}
-                    <h3 className={`m${icon ? `y` : `b`}-2 font-black text-3xl lg:text-5xl text-${color}`}>{heading}</h3>
+                    <h3 className={`m${icon ? `y` : `b`}-2 font-black text-3xl lg:text-5xl text-${color ?? 'black'}`}>{heading}</h3>
                     <div className={`text-xl w-11/12 ${extraclasses ?? ``}`}>{description}</div>
                 </div>
             )
