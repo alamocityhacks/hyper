@@ -3,7 +3,7 @@ import { ToastProvider } from '@magiclabs/ui';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ToastProvider position={'top-end'}>
+    <ToastProvider>
       <Component {...pageProps} />
     </ToastProvider>
   );

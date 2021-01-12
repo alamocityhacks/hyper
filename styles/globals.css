@@ -56,3 +56,10 @@ section > h1 + h2 {
 .backgroundblur {
     backdrop-filter: blur(4px);
 }
+
+.fit-content {
+    width: fit-content;
+  }
+.img-provider:hover img {
+    filter: brightness(0) invert(1);
+}

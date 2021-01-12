@@ -6,6 +6,9 @@ import { WebAuthnExtension } from '@magic-ext/webauthn';
 import { useUser } from '../lib/hooks';
 import Form from '../components/form';
 import SocialLogins from '../components/social-logins';
+import HeadObject from '../components/Head';
+import Nav from '../components/Nav';
+import Footer from '../components/Footer';
 
 const Login = () => {
   useUser({ redirectTo: '/', redirectIfFound: true });
@@ -73,8 +76,10 @@ const Login = () => {
   }
 
   return (
-    <div>
-      <div className='login'>
+    <div id="login">
+      <HeadObject />
+      <Nav />
+      <div className="max-w-xs mx-auto mt-16 bg-black bg-opacity-5 rounded-xl">
         <Form
           disabled={disabled}
           onEmailSubmit={handleLoginWithEmail}
@@ -82,18 +87,7 @@ const Login = () => {
         />
         <SocialLogins onSubmit={handleLoginWithSocial} />
       </div>
-      <style jsx>{`
-        .login {
-          max-width: 20rem;
-          margin: 40px auto 0;
-          padding: 1rem;
-          border: 1px solid #dfe1e5;
-          border-radius: 4px;
-          text-align: center;
-          box-shadow: 0px 0px 6px 6px #f7f7f7;
-          box-sizing: border-box;
-        }
-      `}</style>
+      <Footer />
     </div>
   );
 };

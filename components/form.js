@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Webauthn from './webauthn';
 import { validateEmail } from '../lib/helpers';
-import { Input, Icon, MonochromeIcons, useToast, CallToAction } from '@magiclabs/ui';
+import { useToast } from '@magiclabs/ui';
 
 const Form = ({ onEmailSubmit, disabled, onWebauthnSubmit }) => {
   const [email, setEmail] = useState('');
@@ -18,53 +18,27 @@ const Form = ({ onEmailSubmit, disabled, onWebauthnSubmit }) => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <h3 className='form-header'>Login</h3>
+      <form onSubmit={handleSubmit} className="relative z-30 p-8 flex flex-col space-y-4">
+        <h3 className='text-2xl font-inter font-bold text-left'>Login</h3>
         <div className='input-wrapper'>
-          <Input
+          <input
+            className="focus:outline-none bg-transparent border p-4 rounded-xl"
             placeholder='Enter your email'
-            size='sm'
             type='email'
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            prefix={<Icon inline type={MonochromeIcons.Envelope} size={22} />}
           />
         </div>
-        <div className='submit'>
-          <CallToAction
-            leadingIcon={MonochromeIcons.PaperPlane}
-            color='primary'
-            size='sm'
-            disabled={disabled}
+        <div className='flex flow-row space-x-8'>
+          <div
+            className="border border-black py-2 px-4 rounded-xl font-rubik hover:bg-black hover:text-white"
             onClick={handleSubmit}
           >
-            Send Magic Link
-          </CallToAction>
+            <div className="pointer-events-none">Send Magic Link</div>
+          </div>
           <Webauthn onSubmit={onWebauthnSubmit} email={email} addToast={addToast} />
         </div>
       </form>
-      <style jsx>{`
-        form,
-        label {
-          display: flex;
-          flex-flow: column;
-          text-align: center;
-        }
-        .form-header {
-          font-size: 22px;
-          margin: 25px 0;
-        }
-        .input-wrapper {
-          width: 87%;
-          margin: 0 auto;
-        }
-        .submit {
-          display: flex;
-          justify-content: space-between;
-          width: 87%;
-          margin: 20px auto 0;
-        }
-      `}</style>
     </>
   );
 };
