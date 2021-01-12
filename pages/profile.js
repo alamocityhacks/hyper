@@ -1,5 +1,7 @@
 import { useUser } from '../lib/hooks';
-import { MonochromeIcons, Icon } from '@magiclabs/ui';
+import Nav from '../components/Nav';
+import HeadObject from '../components/Head';
+import Footer from '../components/Footer';
 
 const Profile = () => {
   const user = useUser({ redirectTo: '/login' });
@@ -8,60 +10,68 @@ const Profile = () => {
     <div>
       {user && (
         <>
-          <div>
-            <div className='profile-item-container'>
-              <div className='icon'>
-                <Icon type={MonochromeIcons.Envelope} size={26} />
+          <HeadObject />
+          <Nav />
+          <div className="font-inter max-w-xl mx-6 md:mx-auto mt-16 bg-black bg-opacity-5 rounded-xl relative z-30 p-8 flex flex-col space-y-4">
+            <h1 className="font-bold text-4xl">Group Info</h1>
+            { user.userInfo.points ? <div className="text-center py-5 border-2 rounded-xl md:w-4/12">
+              <div className="text-7xl font-black">
+                {user.userInfo.points["N"]}
               </div>
-              <div>
-                <div className='label'>Email</div>
-                <div className='profile-info'>{user.email}</div>
-              </div>
+              <h3 className="text-4xl font-bold">Points</h3>
+            </div> : '' }
+            <div>
+              <h3 className="font-bold">Ethereum Blockchain Issuer ID</h3>
+              <div className="break-words"><code>{user.issuer}</code></div>
             </div>
-            <div className='profile-item-container'>
-              <div className='icon'>
-                <Icon type={MonochromeIcons.Profile} size={30} />
-              </div>
-              <div>
-                <div className='label'>User Id</div>
-                <div className='profile-info'>{JSON.stringify(user)}</div>
-              </div>
+            { user.userInfo.admin ? <div>
+              <h3 className="font-bold">Group Name</h3>
+              {user.userInfo.admin["BOOL"] ? 'Admin' : user.userInfo.name["S"]}
+            </div> : '' }
+            <div>
+              <h3 className="font-bold">Email</h3>
+              {user.email}
             </div>
+            { user.userInfo.completedChallenges ? <div>
+              <h3 className="font-bold">Completed Challenges</h3>
+              <div className="mt-2 flex flex-wrap">
+                {user.userInfo.completedChallenges["NS"].sort(((a, b) => a - b)).map((number) => (
+                  <div className="mr-2 mb-2 border-transparent inline-block px-3 font-bold font-3xl bg-black bg-opacity-10 rounded-lg">
+                    {number}
+                  </div>
+                ))}
+              </div>
+            </div> : '' }
+            { user.userInfo.groupMembers ? <div>
+              <h3 className="font-bold">Group Members</h3>
+              <div className="mt-2 flex flex-wrap">
+                {user.userInfo.groupMembers["SS"].sort().map((name) => (
+                    <div className="mr-2 mb-2 border-transparent inline-block px-3 font-bold font-3xl bg-black bg-opacity-10 rounded-lg" style={{ backgroundColor: '#' + toHex(name).substring(9, 13) + 'FF', color: 'white' }}>
+                      {name}
+                    </div>
+                ))}
+              </div>
+            </div> : '' }
+            { user.userInfo.admin ? <div>
+              <h3 className="font-bold">Roles</h3>
+              <div className="mr-2 my-2 border-transparent inline-block px-3 font-bold font-3xl bg-black bg-opacity-10 rounded-lg">
+                {user.userInfo.admin["BOOL"] ? 'Admin' : 'Participant'}
+              </div>
+            </div> : '' }
           </div>
+          <Footer />
         </>
       )}
-      <style jsx>{`
-        h2 {
-          font-size: 22px;
-        }
-        div {
-          word-wrap: break-word;
-          white-space: pre-wrap;
-          word-break: normal;
-          overflow: hidden;
-        }
-        .user-header {
-          margin-top: 0px;
-        }
-        .profile-item-container {
-          display: flex;
-          margin: 20px auto;
-        }
-        .icon {
-          margin-right: 25px;
-          line-height: 50px;
-        }
-        .label {
-          font-size: 11px;
-          color: #6851ff;
-          margin-bottom: 4px;
-        }
-        .profile-info {
-          font-size: 17px;
-        }
-      `}</style>
     </div>
   );
 };
 
 export default Profile;
+
+function toHex(str) {
+  var result = '';
+  for (var i = 0; i < str.length; i++) {
+    result += str.charCodeAt(i).toString(16);
+  }
+  return result;
+}
