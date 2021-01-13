@@ -6,6 +6,14 @@ import Footer from '../components/Footer';
 const Profile = () => {
   const user = useUser({ redirectTo: '/login' });
 
+  if (user?.userInfo?.roles["SS"]?.includes("beginners")) {
+    challengeList = Array.from({ length: 30 }, (_, i) => i + 1);
+  } else if (user?.userInfo?.roles["SS"]?.includes("intermediates")) {
+    challengeList = Array.from({ length: 20 }, (_, i) => i + 1);
+  } else if (user?.userInfo?.roles["SS"]?.includes("advanced")) {
+    challengeList = Array.from({ length: 5 }, (_, i) => i + 1);
+  }
+
   return (
     <div>
       {user && (
@@ -15,10 +23,10 @@ const Profile = () => {
           <div className="font-inter max-w-xl mx-6 md:mx-auto mt-16 bg-black bg-opacity-5 rounded-xl relative z-30 p-8 flex flex-col space-y-4">
             <h1 className="font-bold text-4xl">Group Info</h1>
             { user.userInfo.points ? <div className="text-center py-5 border-2 rounded-xl md:w-4/12">
-              <div className="text-7xl font-black">
+              <div className="font-rubik text-7xl font-black">
                 {user.userInfo.points["N"]}
               </div>
-              <h3 className="text-4xl font-bold">Points</h3>
+              <h3 className="font-rubik uppercase text-4xl font-bold">Points</h3>
             </div> : '' }
             <div>
               <h3 className="font-bold">Ethereum Blockchain Issuer ID</h3>
@@ -32,11 +40,11 @@ const Profile = () => {
               <h3 className="font-bold">Email</h3>
               {user.email}
             </div>
-            { user.userInfo.completedChallenges ? <div>
+            { user.userInfo.completedChallenges && user.userInfo.challenges ? <div>
               <h3 className="font-bold">Completed Challenges</h3>
               <div className="mt-2 flex flex-wrap">
-                {user.userInfo.completedChallenges["NS"].sort(((a, b) => a - b)).map((number) => (
-                  <div className="mr-2 mb-2 border-transparent inline-block px-3 font-bold font-3xl bg-black bg-opacity-10 rounded-lg">
+                {Array.from({ length: user.userInfo.challenges["N"] }, (_, i) => i + 1).sort(((a, b) => a - b)).map((number) => (
+                  <div className={`mr-2 mb-2 border-transparent inline-block px-3 font-bold font-3xl ${user.userInfo.completedChallenges["NS"].map(Number).includes(number) ? 'bg-green' : 'bg-black'} bg-opacity-10 rounded-lg`}>
                     {number}
                   </div>
                 ))}
@@ -52,11 +60,14 @@ const Profile = () => {
                 ))}
               </div>
             </div> : '' }
-            { user.userInfo.admin ? <div>
+            { user.userInfo.roles ? <div>
               <h3 className="font-bold">Roles</h3>
-              <div className="mr-2 my-2 border-transparent inline-block px-3 font-bold font-3xl bg-black bg-opacity-10 rounded-lg">
-                {user.userInfo.admin["BOOL"] ? 'Admin' : 'Participant'}
-              </div>
+              { user.userInfo.roles["SS"].map(role => (
+                <div className="capitalize mr-2 my-2 border-transparent inline-block px-3 font-bold font-3xl bg-black bg-opacity-10 rounded-lg">
+                  {role}
+                </div>
+              ))
+              }
             </div> : '' }
           </div>
           <Footer />
