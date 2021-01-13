@@ -44,7 +44,7 @@ const Profile = () => {
               <h3 className="font-bold">Completed Challenges</h3>
               <div className="mt-2 flex flex-wrap">
                 {Array.from({ length: user.userInfo.challenges["N"] }, (_, i) => i + 1).sort(((a, b) => a - b)).map((number) => (
-                  <div className={`mr-2 mb-2 border-transparent inline-block px-3 font-bold font-3xl ${user.userInfo.completedChallenges["NS"].map(Number).includes(number) ? 'bg-green' : 'bg-black'} bg-opacity-10 rounded-lg`}>
+                  <div className={`mr-2 mb-2 border-transparent inline-block px-3 font-bold font-3xl ${user.userInfo.completedChallenges["NS"].map(Number).includes(number) ? 'bg-green bg-opacity-20' : 'bg-black bg-opacity-10'} rounded-lg`}>
                     {number}
                   </div>
                 ))}
