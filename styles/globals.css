@@ -12,6 +12,10 @@
     --turquoise: '#2CDAC5';
 }
 
+body {
+    @apply overflow-x-hidden
+}
+
 #menu-toggle:checked + #menu {
     display: block;
 }
