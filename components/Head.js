@@ -24,6 +24,7 @@ export default function HeadObject({children}) {
             <meta name="twitter:title" content={title} />
             <meta name="twitter:description" content={description} />
             <meta name="twitter:image" content={image} />
+            <script async defer data-website-id="c7b7bd8f-907e-4a11-8485-0bbd76f5bd0f" src="https://analytics.sarthakmohanty.me/umami.js"></script>
             {children}
         </Head>
     )
