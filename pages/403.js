@@ -21,13 +21,12 @@ export default function ErrorPage() {
                 }}
             />*/}
             <motion.img
-                src="/rocket.png"
+                src="/satellite.png"
                 className="absolute z-20 top-1/4 w-24"
                 animate={{
-                    scale: 0.5,
+                    scale: 0.8,
                     x: ['0vw', '100vw'],
                     y: [40, -40, 40],
-                    rotateZ: [0, 45, 90],
                 }}
                 transition={{
                     duration: 5,
