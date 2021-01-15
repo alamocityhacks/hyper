@@ -167,7 +167,7 @@ export default function HomePage() {
                         <Card type={2} icon="star" color="orange" heading="Perks for y'all">
                             Every attendee gets <span className="font-bold text-orange">repl.it</span>'s Hacker Plan. You'll also get high-quality T-shirts (we promise they feel good), exclusive stickers, & sponsor swag.
                         </Card>
-                        <img className="w-3/4 md:w-1/2" src="/sitting.svg" />
+                        <img className="hidden md:block w-3/4 md:w-1/2" src="/sitting.svg" />
                     </div>
                 </section>
                 {/*<section id="sponsors">
