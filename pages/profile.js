@@ -6,14 +6,6 @@ import Footer from '../components/Footer';
 const Profile = () => {
   const user = useUser({ redirectTo: '/login' });
 
-  if (user?.userInfo?.roles["SS"]?.includes("beginners")) {
-    challengeList = Array.from({ length: 30 }, (_, i) => i + 1);
-  } else if (user?.userInfo?.roles["SS"]?.includes("intermediates")) {
-    challengeList = Array.from({ length: 20 }, (_, i) => i + 1);
-  } else if (user?.userInfo?.roles["SS"]?.includes("advanced")) {
-    challengeList = Array.from({ length: 5 }, (_, i) => i + 1);
-  }
-
   return (
     <div>
       {user && (

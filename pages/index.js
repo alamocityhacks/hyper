@@ -1,4 +1,5 @@
 import { useUser } from '../lib/hooks';
+import ChallengesPage from '../components/ChallengesPage'
 import HomePage from '../components/HomePage'
 
 const Home = () => {
@@ -6,7 +7,7 @@ const Home = () => {
 
   return (
     <div>
-      {user ? <div>You're logged in!</div> : <HomePage />}
+      {user ? <ChallengesPage /> : <HomePage />}
     </div>
   );
 };

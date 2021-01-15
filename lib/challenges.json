@@ -1,0 +1,50 @@
+[
+    [
+        {
+            "number": 1,
+            "name": "Intro 1",
+            "points": 45,
+            "difficulty": "Easy",
+            "path": "../challenges/beginner/1.md"
+        }
+    ],
+    [
+        {
+            "number": 1,
+            "name": "Same Same",
+            "points": 24,
+            "difficulty": "Easy",
+            "path": "../challenges/intermediate/1.md"
+        }
+    ],
+    [
+        {
+            "number": 1,
+            "name": "Solve the Blockchain",
+            "points": 80,
+            "difficulty": "Easy",
+            "path": "../challenges/advanced/1.md"
+        },
+        {
+            "number": 2,
+            "name": "Solve the Blockchain",
+            "points": 80,
+            "difficulty": "Easy",
+            "path": "../challenges/advanced/1.md"
+        },
+        {
+            "number": 3,
+            "name": "Solve the Blockchain",
+            "points": 80,
+            "difficulty": "Easy",
+            "path": "../challenges/advanced/1.md"
+        },
+        {
+            "number": 4,
+            "name": "Solve the Blockchain",
+            "points": 80,
+            "difficulty": "Easy",
+            "path": "../challenges/advanced/1.md"
+        }
+    ]
+]

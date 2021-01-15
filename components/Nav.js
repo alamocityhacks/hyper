@@ -6,7 +6,7 @@ const links = [
   { name: 'The Game', href: '/thegame', when: 0 },
   { name: 'Location', href: '/location', when: 0 },
   { name: 'Schedule', href: '/schedule', when: 0 },
-  { name: 'Quests', href: '/quests', when: 1 },
+  { name: 'Quests', href: '/', when: 1 },
   { name: 'Profile', href: '/profile', when: 1 },
   { name: 'Logout', href: '/api/logout', when: 1 },
 ]
