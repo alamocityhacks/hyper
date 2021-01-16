@@ -13,7 +13,7 @@ export default function ChallengesPage() {
                 <div>
                     <Head />
                     <Nav />
-                    <div className="max-w-xl mx-auto mt-16 rounded-xl bg-black bg-opacity-5 p-8">
+                    <div className="max-w-xl mx-6 md:mx-auto mt-16 rounded-xl bg-black bg-opacity-5 p-8">
                         <h1 className="text-4xl font-bold">Quests</h1>
                         <div className="mt-4 flex flex-col space-y-4">
                             {
