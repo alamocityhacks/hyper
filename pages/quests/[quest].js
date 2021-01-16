@@ -36,7 +36,6 @@ export async function getServerSideProps(ctx) {
         let quest = questObject.quest;
         let cookieParams = new URLSearchParams(ctx.req.headers.cookie.replace(/;\s/g, '&'));
         let token = cookieParams.has('token') ? cookieParams.get('token') : '';
-        console.log(token);
         let user;
         if (token.length !== 0) {
             user = jwt.verify(token, process.env.JWT_SECRET);
