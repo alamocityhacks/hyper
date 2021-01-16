@@ -34,24 +34,33 @@ export async function getServerSideProps(ctx) {
     if (ctx.res) {
         let questObject = ctx.query;
         let quest = questObject.quest;
-        let user = jwt.verify(ctx.req.headers.cookie.substring(6), process.env.JWT_SECRET);
+        let cookieParams = new URLSearchParams(ctx.req.headers.cookie.replace(/;\s/g, '&'));
+        let token = cookieParams.has('token') ? cookieParams.get('token') : '';
+        console.log(token);
+        let user;
+        if (token.length !== 0) {
+            user = jwt.verify(token, process.env.JWT_SECRET);
+        }
         let level;
-        let roles = user.userInfo.roles["SS"];
-        if (roles.includes("Beginner")) {
+        let roles = user.userInfo?.roles["SS"];
+        if (roles?.includes("Beginner")) {
             level = "beginner"
-        } else if (roles.includes("Intermediate")) {
+        } else if (roles?.includes("Intermediate")) {
             level = "intermediate"
-        } else if (roles.includes("Advanced")) {
+        } else if (roles?.includes("Advanced")) {
             level = "advanced"
         }
-        let data = await fetch(`https://avatar-tau.vercel.app/api/get?baseid=${process.env.CHALLENGES_AIRTABLE_BASE_ID}&tablename=Challenge%20Data&body={%22filterByFormula%22:%20%22id%20=%20%27${level + quest}%27%22,%22maxRecords%22:%201}`);
-        data = await data.json();
-        data = data.res[0].fields.data
+        let data;
+        if (level.length !== 0) {
+            data = await fetch(`https://avatar-tau.vercel.app/api/get?baseid=${process.env.CHALLENGES_AIRTABLE_BASE_ID}&tablename=Challenge%20Data&body={%22filterByFormula%22:%20%22id%20=%20%27${level + quest}%27%22,%22maxRecords%22:%201}`);
+            data = await data.json();
+            data = data.res[0].fields.data
+        }
         return {
             props: {
                 quest: quest,
                 level: level,
-                data: data,
+                data: data ? data : 404,
             }
         }
     }
