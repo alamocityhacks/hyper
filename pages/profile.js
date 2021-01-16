@@ -7,7 +7,7 @@ const Profile = () => {
   const user = useUser({ redirectTo: '/login' });
 
   return (
-    <div>
+    <>
       {user && (
         <>
           <HeadObject />
@@ -65,7 +65,7 @@ const Profile = () => {
           <Footer />
         </>
       )}
-    </div>
+    </>
   );
 };
 

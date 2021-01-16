@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import Head from "../components/Head";
 import Nav from "../components/Nav";
 
-export default function ErrorPage() {
+export default function ForbiddenPage() {
     return (
         <div>
             <Head />
