@@ -12,6 +12,7 @@
     "@magiclabs/ui": "^0.8.0",
     "autoprefixer": "^10.2.1",
     "aws-sdk": "^2.825.0",
+    "axios": "^0.21.1",
     "cookie": "0.4.0",
     "jsonwebtoken": "^8.5.1",
     "magic-sdk": "^4.0.0",
@@ -19,6 +20,9 @@
     "postcss": "^8.2.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-markdown": "^5.0.3",
+    "react-syntax-highlighter": "^15.4.3",
+    "remark-gfm": "^1.0.0",
     "swr": "0.1.16",
     "tailwindcss": "^2.0.2"
   },

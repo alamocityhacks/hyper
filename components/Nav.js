@@ -33,7 +33,7 @@ export default function Nav() {
             {user ? (
               <>
                 {links.filter(link => (link.when > 0)).map(({ name, href }) => (
-                  <li key={name}>
+                  <li className="li-none" key={name}>
                     <Link href={href}>
                       <a className="font-inter text-black uppercase text-xl lg:p-4 py-3 px-0 block hover:text-gray-500">
                         {name}
@@ -45,7 +45,7 @@ export default function Nav() {
             ) : (
               <>
                 {links.filter(link => link.when < 1).map(({ name, href }) => (
-                  <li key={name}>
+                  <li className="li-none" key={name}>
                     <Link href={href}>
                       <a className="font-inter text-black uppercase text-xl lg:p-4 py-3 px-0 block hover:text-gray-500">
                         {name}

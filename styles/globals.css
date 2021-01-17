@@ -53,6 +53,22 @@ section > h1 + p {
     @apply mt-2 text-xl md:text-2xl w-11/12
 }
 
+.challengediv {
+    @apply mx-auto w-10/12 pt-20
+}
+
+.challengediv > h1 {
+    @apply font-rubik text-5xl uppercase font-bold
+}
+
+.challengediv > h1 ~ p {
+    @apply mt-2 text-base md:text-lg w-11/12
+}
+
+pre {
+    @apply rounded-xl
+}
+
 section > h1 + h2 {
     @apply text-xl md:text-2xl w-11/12
 }
@@ -66,4 +82,16 @@ section > h1 + h2 {
   }
 .img-provider:hover img {
     filter: brightness(0) invert(1);
+}
+
+li {
+    @apply list-disc list-inside
+}
+
+.li-none {
+    @apply list-none
+}
+
+blockquote {
+    @apply border-l-2 pl-2
 }
