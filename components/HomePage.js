@@ -31,7 +31,7 @@ export default function HomePage() {
                 </div>
                 <div className="z-10 relative">
                     <div className="uppercase opacity-60 text-2xl md:text-4xl">Presents</div>
-                    <h1 className="uppercase hyper text-6xl md:text-8xl">Hyper</h1>
+                    <h1 className="uppercase hyper text-7xl md:text-8xl">Hyper</h1>
                     <h2 className="uppercase text-4xl md:text-5xl w-3/5">A coding competition for high schoolers</h2>
                     <div className="mt-4 flex flex-col sm:flex-row sm:space-x-10">
                         <Calendar month="September" day="25" />
