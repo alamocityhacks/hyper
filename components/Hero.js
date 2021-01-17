@@ -13,7 +13,7 @@ export default function Hero({ color, title }) {
         document.querySelector('#hero').style.backgroundColor = colors[color];
     })
     return (
-        <div id="hero" className={`py-20 pl-4 md:pl-24 bg-${color ?? `black`}`}>
+        <div id="hero" className={`py-20 bg-${color ?? `black`}`}>
             <h1 className={`uppercase font-rubik font-bold text-7xl ${color === 'yellow' ? 'text-black' : 'text-white'}`}>{title}</h1>
         </div>
     )
