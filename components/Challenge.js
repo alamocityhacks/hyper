@@ -4,7 +4,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 
 const renderers = {
     code: ({ language, value }) => {
-        return <SyntaxHighlighter language="javascript" children={value} showLineNumbers />
+        return <SyntaxHighlighter language={language ? language : 'javascript'} children={value} showLineNumbers />
     }
 }
 
