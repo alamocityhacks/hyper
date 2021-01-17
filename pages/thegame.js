@@ -9,7 +9,7 @@ export default function TheGame() {
         <div>
             <Head />
             <Nav />
-            <Hero color="yellow" title="The Game" description="for marketing purposes" />
+            <Hero color="yellow" title="The Game" />
             <main>
                 <section className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-10">
                     <Card icon="map" color="red" heading="Beginners" extraclasses="leading-loose">
