@@ -25,7 +25,7 @@ body {
 }
 
 #hero {
-    @apply pl-10 md:pl-12
+    @apply pl-4 md:pl-20
 }
 
 section {
