@@ -101,7 +101,7 @@ blockquote {
 }
 
 code {
-    @apply bg-black text-black opacity-100 px-2 py-1 bg-opacity-10 rounded-xl
+    @apply text-red opacity-100
 }
 
 .language-js {
