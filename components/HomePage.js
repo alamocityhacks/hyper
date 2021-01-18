@@ -69,28 +69,28 @@ export default function HomePage() {
                 <section id="whatishyper">
                     <h1><Hyper size="5xl" color="black" /> is <span className="font-black text-blue">NOT</span> a hackathon</h1>
                     <p>
-                        Hyper is a challenge. Hyper was not made for the experts and was not made for the beginners. It was made for all. You’ll be tasked with a number of quests each representing this year’s theme: space. Solve them and the leading team takes control of the hill. Every 30 minutes you keep the lead, you’ll get a point.
+                        Hyper is a challenge. Hyper was not made for the experts and was not made for the beginners. It was made for all. You’ll be tasked with a number of quests each representing this year’s theme: space. Solve them and the leading team takes control of the hill. Every hour you keep the lead, you’ll get a point.
                     </p>
                     <div className="mt-4 mb-8 grid grid-cols-1 md:grid-cols-2 gap-10">
                         <Card icon="map" color="red" heading="Beginners" extraclasses="leading-loose">
                             30 quests.
                             <br />
                             <div className="leading-normal">
-                                Not king-of-the-hill (KOTH) style. Every quest gets you 1 point. Team with the highest points the next day wins.
+                                Not king-of-the-hill (KOTH) style. Every quest gets you some points. The team with the highest points the next day wins.
                             </div>
                         </Card>
                         <Card icon="puzzle" color="orange" heading="Intermediates" extraclasses="leading-loose">
                             20 quests.
                             <br />
                             <div className="leading-normal">
-                                KOTH style. Every quest gets you to the next, the leading team gets 1 point every half-hour.
+                                KOTH style. Every quest gets you to the next. Every hour, the leading team gets the points.
                             </div>
                         </Card>
                         <Card icon="flag" color="turquoise" heading="Advanced" extraclasses="leading-loose">
                             5 quests.
                             <br />
                             <div className="leading-normal">
-                                KOTH style. Every 1 hour in control of the hill, you'll win a point. These quests are harder than they look.
+                                KOTH style. Every 2 hours in control of the hill, you'll win a point. These quests are harder than they look.
                             </div>
                         </Card>
                         <Card icon="pencil" color="blue" heading="Workshops">
