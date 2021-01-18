@@ -90,7 +90,7 @@ export default function HomePage() {
                             5 quests.
                             <br />
                             <div className="leading-normal">
-                                KOTH style. Every 2 hours in control of the hill, you'll win a point. These quests are harder than they look.
+                                KOTH style. Every 2 hours in control of the hill, you'll win the points. These quests are harder than they look.
                             </div>
                         </Card>
                         <Card icon="pencil" color="blue" heading="Workshops">
