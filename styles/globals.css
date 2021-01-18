@@ -100,22 +100,13 @@ blockquote {
     color: black;
 }
 
-.nocode::before {
-    content: '';
-}
-
-.nocode::after {
-    content: '';
-}
-
 code {
-    color: var(--red);
+    @apply bg-black bg-opacity-10 rounded-xl
+    color: fuchsia;
 }
 
-code::before {
-    content: '`';
-}
-
-code::after {
-    content: '`';
+.language-js {
+    background-color: inherit;
+    border-radius: 0;
+    opacity: inherit;
 }
