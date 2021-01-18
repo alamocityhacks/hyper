@@ -5,11 +5,11 @@
 @tailwind utilities;
 
 :root {
-    --blue: '#69709F';
-    --red: '#E94957';
-    --orange: '#FF7E47';
-    --yellow: '#FFFD85';
-    --turquoise: '#2CDAC5';
+    --blue: #69709F;
+    --red: #E94957;
+    --orange: #FF7E47;
+    --yellow: #FFFD85;
+    --turquoise: #2CDAC5;
 }
 
 body {
@@ -94,4 +94,28 @@ li {
 
 blockquote {
     @apply border-l-2 pl-2
+}
+
+.nocode {
+    color: black;
+}
+
+.nocode::before {
+    content: '';
+}
+
+.nocode::after {
+    content: '';
+}
+
+code {
+    color: var(--red);
+}
+
+code::before {
+    content: '`';
+}
+
+code::after {
+    content: '`';
 }

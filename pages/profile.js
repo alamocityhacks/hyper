@@ -22,7 +22,7 @@ const Profile = () => {
             </div> : '' }
             <div>
               <h3 className="font-bold">Ethereum Blockchain Issuer ID</h3>
-              <div className="break-words"><code>{user.issuer}</code></div>
+              <div className="break-words"><code className="nocode">{user.issuer}</code></div>
             </div>
             { user.userInfo?.admin ? <div>
               <h3 className="font-bold">Group Name</h3>
