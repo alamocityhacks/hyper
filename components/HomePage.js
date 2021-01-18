@@ -83,14 +83,14 @@ export default function HomePage() {
                             20 quests.
                             <br />
                             <div className="leading-normal">
-                                KOTH style. Every quest gets you to the next. Every hour, the leading team gets the points.
+                                KOTH style. Every quest gets you to the next. Every 2 hours, the leading team gets the points.
                             </div>
                         </Card>
                         <Card icon="flag" color="turquoise" heading="Advanced" extraclasses="leading-loose">
                             5 quests.
                             <br />
                             <div className="leading-normal">
-                                KOTH style. Every 2 hours in control of the hill, you'll win the points. These quests are harder than they look.
+                                KOTH style. Every hour in control of the hill, you'll win the points. These quests are harder than they look.
                             </div>
                         </Card>
                         <Card icon="pencil" color="blue" heading="Workshops">
