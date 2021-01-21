@@ -69,7 +69,7 @@ export default function HomePage() {
                 <section id="whatishyper">
                     <h1><Hyper size="5xl" color="black" /> is <span className="font-black text-blue">NOT</span> a hackathon</h1>
                     <p>
-                        Hyper is a challenge. Hyper was not made for the experts and was not made for the beginners. It was made for all. You’ll be tasked with a number of quests each representing this year’s theme: space. Solve them and the leading team takes control of the hill. Every hour you keep the lead, you’ll get a point.
+                        Hyper is a challenge. Hyper was not made for the experts and was not made for the beginners. It was made for all. You’ll be tasked with a number of quests each representing this year’s theme: space. Solve them and the leading team takes control of the hill. Every 2 hours you keep the lead, you’ll get a point.
                     </p>
                     <div className="mt-4 mb-8 grid grid-cols-1 md:grid-cols-2 gap-10">
                         <Card icon="map" color="red" heading="Beginners" extraclasses="leading-loose">
