@@ -49,17 +49,17 @@ export default function TheGame() {
                     <Card type={3} icon="puzzle" color="orange" heading="Intermediates">
                         <p>You’ll have <span className="text-orange font-bold">30 quests</span>. If you find them too easy, we’ll move you up to Advanced.<br /></p>
                         <p className="pt-2">Quests for Intermediates work KOTH style.<br /></p>
-                        <p className="pt-2"><b>1.</b> First to win a challenge takes a lead. Keep that lead and in 30 minutes, you'll get those points. If another team gets that challenge within that time period, they get 1/2 the points the first team gets.<br /></p>
+                        <p className="pt-2"><b>1.</b> First to win a challenge takes a lead. Keep that lead and in 2 hours, you'll get those points. If another team gets that challenge within that time period, they get 1/2 the points the first team gets.<br /></p>
                         <p className="pt-2"><b>2.</b> Take back control of the hill by doing the next challenge. In the same way, you'll get your points.</p>
                         <p className="pt-2"><b>3.</b> Quests do not start from easy to hard difficulty. Some are easy, and some are hard. You can jump quests but you cannot manually do them. You'll be asked for your source code at the end of the challenge.</p>
                     </Card>
                     <Card type={3} icon="flag" color="turquoise" heading="Advanced">
                         <p>You’ll have <span className="text-turquoise font-bold">5 quests</span>. Don't be fooled by the number. These aren't easy.<br /></p>
                         <p className="pt-2">Points can be earned KOTH style like above. Above rules apply. Here's a few additions and changes:<br /></p>
-                        <p className="pt-2"><b>1.</b> Winning takes patience. Instead of 30 minutes, you'll be required to hold that hill for 1 hour.<br /></p>
+                        <p className="pt-2"><b>1.</b> Winning takes patience. Instead of 2 hours, you'll be required to hold that hill for 1 hour.<br /></p>
                         <p className="pt-2"><b>2.</b> Unlike Intermediates, your quests aren't the same as beginners. Be ready to be challenged.</p>
-                        <p className="pt-2"><b>3.</b> Quests do not start from easy to hard difficulty. They are all of immense difficulty. You can jump quests but you cannot manually do them. You'll be asked for your source code at the end of the challenge.</p>
-                        <p className="pt-2"><b>4. </b> You'll be able to talk with your team, but <span className="opacity-100 font-bold">you won't have internet access.</span> If you don't know how to do something, you'll have 3 lifelines to ask a mentor. Use them wisely. If you do receive a phone call from somebody, we'll pass it on to you.</p>
+                        <p className="pt-2"><b>3.</b> Quests do not start from easy to hard difficulty. They are all of equal difficulty. You can jump quests but you cannot manually do them. You'll be asked for your source code at the end of the challenge.</p>
+                        {/*<p className="pt-2"><b>4. </b> You'll be able to talk with your team, but <span className="opacity-100 font-bold">you won't have internet access.</span> If you don't know how to do something, you'll have 3 lifelines to ask a mentor. Use them wisely. If you do receive a phone call from somebody, we'll pass it on to you.</p>*/}
                     </Card>
                     <Card type={3} heading="Breaks and Workshops">
                         <p>All quests will stop for everybody during dinner, breakfast, and at our <span className="text-blue font-bold">2am Jackbox Break Time</span>.<br /></p>
