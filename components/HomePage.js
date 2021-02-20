@@ -14,7 +14,7 @@ export default function HomePage() {
         <div>
             <Head />
             <Nav />
-            <div id="hero" className="bg-gradient-to-b from-blue to-blue-dark h-full sm:min-h-screen lg:min-h-0 lg:h-full lg:pb-12 pt-6 pb-8 md:py-12 text-white font-rubik">
+            <div id="hero" className="bg-gradient-to-b from-blue to-blue-dark h-full sm:min-h-screen md:min-h-0 md:h-full lg:pb-12 pt-6 pb-8 md:py-12 text-white font-rubik">
                 <div className="hidden md:block absolute z-0 left-svg xl:leftxl-svg">
                     <motion.img
                         src="/spaceship2.svg"
