@@ -20,7 +20,7 @@ export default function Nav() {
           <a className="font-rubik-mono text-xl">Alamo City Hacks</a>
         </Link>
       </div>
-      <label htmlFor="menu-toggle" className="pointer-cursor lg:hidden block"><svg
+      <label htmlFor="menu-toggle" className="cursor-pointer lg:hidden block"><svg
         className="fill-current text-gray-900" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
         viewBox="0 0 20 20">
         <title>menu</title>
